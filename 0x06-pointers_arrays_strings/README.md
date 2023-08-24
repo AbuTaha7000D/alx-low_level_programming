@@ -1,2 +1,1 @@
-# Pointers, Arrays Strings
-0-strcat.c: concatenates two strings.
+# More Pointers Arrays and Strings
