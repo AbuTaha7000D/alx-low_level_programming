@@ -3,7 +3,7 @@
  * rev_string - prints reversed string, followed by a new line
  * @s: pointer to the string to print
  * Return: void
-*/
+ */
 
 void rev_string(char *s)
 {
@@ -12,7 +12,7 @@ void rev_string(char *s)
 	char temp;
 
 	for (len = 0; s[len] != '\0'; len++)
-	;
+		;
 
 	i = 0;
 
@@ -25,6 +25,4 @@ void rev_string(char *s)
 		s[i] = temp;
 		i++;
 	}
-
 }
-
