@@ -13,11 +13,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (n == 0 && index == 0)
 		return (0);
 
-	i = log(n + 1) / log(2);
-	if (index > i)
-		return (-1);
-
-	i = 0;
 	while (n > 0)
 	{
 		if (n & 1)
@@ -27,5 +22,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		i++;
 		n = n >> 1;
 	}
+	if (index + 1 > i)
+		return (-1);
 	return (buffer[index]);
 }
