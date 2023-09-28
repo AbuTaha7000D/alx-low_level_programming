@@ -8,21 +8,14 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int buffer[1000], i = 0;
+	unsigned long int joker = 1;
 
-	if (n == 0 && index == 0)
-		return (0);
-
-	while (n > 0)
-	{
-		if (n & 1)
-			buffer[i] = 1;
-		else
-			buffer[i] = 0;
-		i++;
-		n = n >> 1;
-	}
-	if (index + 1 > i)
+	if (index >= sizeof(n) * 8)
 		return (-1);
-	return (buffer[index]);
+	joker <<= index;
+	if ((joker & n) != 0)
+		return (1);
+	else
+		return (0);
+	return (-1);
 }
