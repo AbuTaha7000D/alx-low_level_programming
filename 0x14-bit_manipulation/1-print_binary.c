@@ -8,10 +8,10 @@ void conv(unsigned long int n)
 {
 	if (n == 0)
 		return;
-	
+
 	if (n > 0)
 		conv(n >> 1);
-	
+
 	if (n & 1)
 		printf("1");
 	else
