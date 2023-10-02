@@ -3,7 +3,7 @@
 /**
  * read_textfile - Reads a text file and prints it to POSIX stdout.
  * @filename: A pointer to the name of the file.
- * @letters: num of letters. 
+ * @letters: num of letters.
  *
  * Return: 0 or the actual number of bytes.
  */
